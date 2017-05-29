@@ -57934,7 +57934,7 @@ into the sorting code and caused a 25% performance hit in BZ Benchmark. --JAB (4
       updates = Array.isArray(modelUpdate) ? modelUpdate : [modelUpdate];
       for (k = 0, len = updates.length; k < len; k++) {
         u = updates[k];
-        if (socket) {
+        if (socket && activityType === "hubnet") {
           socket.emit("update", {turtles: modelUpdate[k].turtles}); 
           socket.emit("update", {patches: modelUpdate[k].patches});
         }

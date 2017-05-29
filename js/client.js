@@ -2,6 +2,7 @@ var socket;
 var universe;
 var universes = {};
 var commandQueue = [];
+var activityType;
 
 jQuery(document).ready(function() {
   var userId;
@@ -25,7 +26,7 @@ jQuery(document).ready(function() {
         Interface.showStudent(data.room, data.components);
         break;
       case "login":
-        Interface.showLogin(data.rooms, data.components, data.activityType);
+        Interface.showLogin(data.rooms, data.components, activityType);
         break;
       case "disconnected":
         Interface.showDisconnected();
@@ -66,7 +67,7 @@ jQuery(document).ready(function() {
       }
     } else {
       //console.log(data.components[data.hubnetMessageTag]);
-      if (data.activityType === "hubnet") {
+      if (activityType === "hubnet") {
         // send it to reporters
         $(data.components[data.hubnetMessageTag]).val(data.hubnetMessage);
       } else {
