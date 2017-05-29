@@ -11,4 +11,3 @@
 ## Use GbCC primitive commands and reporters
 - [x] gbcc-get
 - [x] gbcc-run-code
-- [x] gbcc-click-canvas
