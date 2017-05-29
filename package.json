@@ -1,7 +1,7 @@
 {
   "name": "cremmler",
   "version": "0.0.0",
-  "description": "Test Websockets",
+  "description": "GbCC Introbuttons",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -18,7 +18,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.heroku.com/nlogo-hubnet-disease.git"
   },
   "keywords": [
     "node",
